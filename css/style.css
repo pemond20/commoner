@@ -1,0 +1,693 @@
+@charset "utf-8";
+/* CSS Document */
+
+@import url('https://fonts.googleapis.com/css?family=Martel:200,300,400,600,700,800,900|Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&display=swap');
+
+
+
+html { 
+  font-size: 62.5%;
+} 
+
+
+/* -----------------------------------------HOME PAGE FONT*/
+
+h1{
+	font-family: 'Roboto-Black', sans-serif;
+	font-weight: 900;
+	font-size: 6em;
+	color: #333333;
+	padding-bottom:0;
+}
+h1::before {
+    background-color: #427a26; 
+    bottom: 0.2em;
+    content: '';
+    display: block;
+    height: 0.2em;
+	margin-bottom:0.4em;
+    width: 2em;
+}
+h2{
+	font-family: 'Roboto-Black', sans-serif;
+	font-weight: 900;
+	font-size: 4em;
+	color: #333333;
+	text-align:center;
+	padding:1.5em;
+	text-transform: uppercase;
+}
+h3{
+	font-family: 'Roboto-Black', sans-serif;
+	font-weight: 900;
+	font-size: 1.8em;
+	margin:0;
+	color: #333333;
+}
+.hoc-article-content h3{
+	padding-bottom: 1em;
+}
+p{
+	font-family: 'Roboto-Black', sans-serif;
+	font-weight: normal;
+	font-size: 1.4em;
+	color: #333333;
+}
+.subtitle{
+	font-family: 'Roboto-light', sans-serif;
+	font-weight: 100;
+	font-size:0.7em;
+	margin:0;
+	padding:0;
+	color: #333333;	
+}
+.footer p{
+	color:#838383;
+}
+
+
+
+/*-----------------------------------------HOC GREEN BANNER*/
+
+
+
+.hoc-top-banner{
+	background-color:#2e551b;
+	height: 4em;
+	padding-top: 0.5em;
+}
+
+.hoc-top-banner-right{
+	float: right;
+	padding-top: 0.4em;	
+}
+.hoc-top-banner-right a{
+	color: #fff;
+	font-size: 1.4em;
+	text-transform: uppercase;
+}
+
+/*-----------------------------------------COMMONER BANNER*/
+
+.hoc-navbar{
+	background-color: #fff;
+	height: 6em;
+}
+.hoc-navbar .container{ 
+	position: relative;
+}
+.hoc-navbar-brand a{
+	float:left;
+	padding-right: 2em;
+	font-family: 'Roboto-Black', sans-serif;
+	font-weight: 400;
+	font-size: 2em;
+	color: #333333;
+	padding-top: 0.8em;
+	padding-bottom:0;
+	text-decoration:none;
+}
+
+
+/*-----------------------------------------COMMONER MENU*/
+
+.hoc-navbar-menu{
+	float: right;
+}
+.hoc-navbar-menu .show-menu{
+	display:none;
+}
+
+/*Strip the ul of padding and list styling*/
+.hoc-navbar-menu ul {
+    list-style-type:none;
+    margin:0;
+    padding:0;
+}
+/*Create a horizontal list with spacing*/
+.hoc-navbar-menu li {
+    display:inline-block;
+	float:left;
+}
+#menu-articles{
+	display:none;
+}
+/*Style for menu links*/
+.hoc-navbar-menu li a, .hoc-navbar-menu li label {
+    display:block;
+    min-width:10em;
+    max-width: 13em;
+    text-align: center;
+    padding: 1.4em;
+    font-family: 'Roboto-Black', sans-serif;
+	font-weight: normal;
+	font-size: 1.4em;
+	color: #333333;
+    background: #fff;
+    text-decoration: none;
+	border-left: 1px solid #cccccc;
+	margin:0;
+}
+/*Hover state for top level links*/
+.hoc-navbar-menu li:hover>a, .hoc-navbar-menu li:hover>label {
+    background: #427a26;
+	color: #fff;
+	cursor: pointer;
+}
+/*Style for dropdown links*/
+.hoc-navbar-menu li ul a, .hoc-navbar-menu li ul label {
+    background: #f3f3f3;
+    color: #2f3036;  
+	text-align: left;
+}
+/*Hide dropdown links until they are needed*/
+.hoc-navbar-menu li ul {
+	position: absolute;
+	z-index: 2;
+}
+/*Make dropdown links vertical*/
+.hoc-navbar-menu li ul li {
+    display: block;
+    float: none;
+	border-top: solid 1px #cccccc;
+}
+/*Prevent text wrapping*/
+.hoc-navbar-menu li ul li a {
+    width: auto;
+    min-width: 15em;
+	max-width: none;
+	border: none;
+}
+.hoc-navbar-menu .hoc-navbar-highlight a, .hoc-navbar-menu .hoc-navbar-highlight label{
+	background-color: #427a26;
+	color: white;
+	border: none;
+}
+.hoc-navbar-menu .hoc-navbar-highlight a:hover, .hoc-navbar-menu .hoc-navbar-highlight label:hover{
+	background-color: #333333;
+	color: white;
+	border: none;
+}
+
+/*Hide checkbox*/
+.hoc-navbar input[type=checkbox]{
+    display: none;
+}
+/*Show menu when invisible checkbox is checked*/
+.hoc-navbar input[type=checkbox]:checked ~ #menu, .hoc-navbar input[type=checkbox]:checked ~ #menu-articles{
+    display: block;
+}
+.print-navbar .fa{
+	padding: 1em;
+	color:#333333;
+	border-right:solid 1px #cccccc;
+}
+.print-navbar .fa:hover{
+	color:#427a26;
+	cursor: pointer;
+}
+
+@media only screen and (max-width: 768px) {
+	
+	.hoc-navbar-menu{
+	    text-align: right;
+		position: absolute;
+		top: 10px;
+		right: 0;
+		display: block;
+		width: 100%;
+	}
+	.hoc-navbar-menu i {
+		font-size: 2em;
+	}
+	.hoc-navbar-menu .show-menu{
+		display: block;
+		text-decoration: none;
+		color: #fff;
+		background: #427a26;
+		text-align: center;
+		padding: 10px 15px;
+		max-width: none;
+		margin: auto;
+		float: right;
+	}
+	.hoc-navbar-menu .show-menu:hover{
+		cursor: pointer;
+		background: #f0f;
+	}
+	/* Navigation */
+    .hoc-navbar-menu>ul {
+        position: relative;
+		top: 9px;
+		display:none;
+    }
+	.hoc-navbar-menu li ul{
+		position: relative;
+	}
+    .hoc-navbar-menu ul li, .hoc-navbar-menu li a, .hoc-navbar-menu ul li, .hoc-navbar-menu li label {
+        width: 100%;
+		border-left: none;
+		max-width: none;
+    }
+	.hoc-navbar-menu li {
+        border-top: solid 1px #cccccc;
+    }
+	
+	.column{	
+    	column-count:1;
+  	}
+	
+	.hoc-article-content{
+		padding: 3.5em;
+	}
+
+}
+
+
+/*-----------------------------------------HOME PAGE BANNER*/
+
+.banner{
+	height:45em;
+	background-size: cover;
+}
+.banner-title{	
+	padding-top:10em;
+	text-transform: uppercase;
+}
+.banner-title .subtitle{
+	text-transform: none;
+}
+
+
+/*-----------------------------------------MESSAGE OF THE CLERK*/
+
+
+.clerk{
+	background-image:url("../img/clerk-background.jpg");
+	background-size: cover;
+	padding-bottom: 8em;
+}
+.column{
+	column-count:2;
+	column-gap:5em;
+}
+
+
+/*-----------------------------------------ARTICLES*/
+
+.article{
+	display: block;
+	position:relative;
+	margin-bottom:3em;
+	overflow: hidden;
+}
+a.article img{
+	-webkit-filter: grayscale(100%);
+   -moz-filter: grayscale(100%);
+   filter: grayscale(100%);
+   transition: all 0.5s ease;
+	width: 100%;
+	height: auto;
+}
+a.article:hover img{
+	-webkit-filter: grayscale(0%);
+   -moz-filter: grayscale(0%);
+   filter: grayscale(0%);
+	transform: scale(1.1);
+}
+.information{
+	position:absolute;
+	bottom:0;
+	left:10%;
+	right:10%;
+}
+.tag{
+	display:inline-block;
+	font-family: 'Roboto-Light', sans-serif;
+	font-weight: 200;
+	font-size: 1.2em;
+	padding: 0.5em 1em;
+}
+.article > .information > h3{
+	display: block;
+	background-color: white;
+	padding:1em 1.5em;
+}
+.previous-article a, .next-article a{
+	font-family: 'Roboto-Light', sans-serif;
+	font-weight: 200;
+	font-size: 1.2em;
+	padding: 1.5em 2em;
+	background-color: #333333;
+	color: white;	-moz-transition: all .2s ease-in;
+    -o-transition: all .2s ease-in;
+    -webkit-transition: all .2s ease-in;
+    transition: all .2s ease-in;
+}
+.previous-article a:hover, .next-article a:hover{
+	background-color: #444444;
+	text-decoration: none;
+}
+.previous-article .fa{
+	padding-right: 0.6em;
+}
+.next-article .fa{
+	padding-left: 0.6em;
+}
+.previous-article{
+	float: left;
+}
+.next-article{
+	float: right;
+}
+
+/*-----------------------------------------FOOTER*/
+
+
+
+.footer{
+	margin-top:5em;
+	background-image: url("../img/footer-bg.jpg");
+	height:13em;
+	padding-top:4em;	
+}
+
+.footer .fa{
+	padding-top:0.5em;
+	padding-left:0.5em;
+	float:right;
+	color:#9B9B9B;
+	-moz-transition: all .2s ease-in;
+    -o-transition: all .2s ease-in;
+    -webkit-transition: all .2s ease-in;
+    transition: all .2s ease-in;
+}
+.footer .fa:hover{
+	color:#D0D0D0;
+}
+
+
+
+/*-----------------------------------------ARTICLES PAGE*/
+
+.hoc-article-header{
+	height:50em; 
+	background-position: center;
+}
+.hoc-article-content img{
+	width: 100%;
+}
+.hoc-article-content{
+	background-color:#fff;
+	position: relative;
+	top:-20em;
+	left:0;
+	right: 0;
+	padding: 7.5em;
+	margin-bottom: -20em;
+}
+
+
+
+/*-----------------------------------------ARTICLES PAGE FONT STYLE*/
+
+
+
+.hoc-article-content h1{
+	font-size: 5em;
+	margin: 0 0 0 0;
+	padding: 0 0 0 0;
+	text-transform: uppercase;
+}
+.hoc-article-content .article-author{
+	font-size: 2em;
+	margin: 0 0 0 0;
+	padding: 0.5em 0 2em 0;
+}
+.hoc-article-content h2{
+	font-size: 2em;
+	margin: 1.5em 0 1.5em 0;
+	padding: 0 0 0 0.5em;
+	text-align: left;
+	text-transform: uppercase;
+}
+.hoc-article-content p {
+	line-height: 1.7;
+	padding-bottom: 1.5em;
+}
+.hoc-article-content ul{
+	font-family: 'Roboto-Black', sans-serif;
+	font-weight: normal;
+	font-size: 1.4em;
+	color: #333333;
+	line-height: 1.7em;
+	padding-bottom: 2em;
+}
+.hoc-article-content li{
+	list-style-type: square;
+	
+}
+.hoc-article-highlight{
+	padding: 1em 3.5em 0.5em 3.5em;
+	margin-bottom: 4em;
+}
+.quote{
+	padding: 4em;
+	text-align: center;
+	height: 100%;
+	position: absolute;
+}
+.quote-content{
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+}
+.quote-content p{
+	color:#fff;
+	font-size:2.5em;
+	font-weight: 900;
+}
+.quote-content .signature{
+	color:#fff;
+	font-size:1.5em;
+	font-weight: 400;
+	padding-top: 0.5em;
+}
+figcaption{
+	font-size:1.4em;
+	font-weight: 400;
+	padding: 1em 0 1em 1em;
+	border-bottom: 0.2em solid #333333;
+}
+figure{
+	margin-bottom:0;
+}
+.bottom-navigation{
+	margin-top:	8em;
+}
+
+
+
+
+
+
+/*-----------------------------------------COLOR PROFIL*/
+
+
+/*-----------------------------------------Training HOC GREEN*/
+
+
+
+.information > .hoc-training, .information > .hoc-communications {
+	background:#427a26;
+	color: white;
+}
+.hoc-training .hoc-article-highlight, .hoc-communications .hoc-article-highlight{
+	background-color:#427a26;
+}
+.hoc-training .hoc-article-highlight p, .hoc-communications .hoc-article-highlight p{
+	color: white;
+}
+.hoc-training h1:before, .hoc-communications h1:before{
+	background:#427a26;
+}
+.hoc-training h2, .hoc-communications h2{
+	border-left: 0.3em solid #427a26;
+}
+.hoc-training .hoc-article-highlight h2, .hoc-communications .hoc-article-highlight h2{
+	color: white;
+	padding: 0;
+	border:0;
+}
+.hoc-training .quote, .hoc-communications .quote{
+	background-color:#427a26;
+}
+
+
+
+/*-----------------------------------------TECHNOLOGY, HUMAN RESOURCES, HEALTH AND WELLNESS PURPLE*/
+
+
+
+.information > .hoc-technology, .information > .hoc-humanresources, .information > .hoc-healthwellness{
+	background:#5c068c;
+	color: white;
+}
+.hoc-technology .hoc-article-highlight, .hoc-humanresources .hoc-article-highlight, .hoc-healthwellness .hoc-article-highlight{
+	background-color:#5c068c;
+}
+.hoc-technology .hoc-article-highlight p, .hoc-humanresources .hoc-article-highlight p, .hoc-healthwellness .hoc-article-highlight p{
+	color: white;
+}
+.hoc-technology h1:before, .hoc-humanresources h1:before, .hoc-healthwellness h1:before{
+	background:#5c068c;
+}
+.hoc-technology h2, .hoc-humanresources h2, .hoc-healthwellness h2{
+	border-left: 0.3em solid #5c068c;
+}
+.hoc-technology .hoc-article-highlight h2, .hoc-humanresources .hoc-article-highlight h2, .hoc-healthwellness .hoc-article-highlight h2{
+	color: white;
+	padding: 0;
+	border:0;
+}
+.hoc-technology .quote, .hoc-humanresources .quote, .hoc-healthwellness .quote{
+	background-color:#5c068c;
+}
+
+
+/*-----------------------------------------PROCEDURE, FINANCE BLUE*/
+
+
+
+.information > .hoc-procedure, .information > .hoc-finance{
+	background:#007db3;
+	color: white;
+}
+.hoc-procedure .hoc-article-highlight, .hoc-finance .hoc-article-highlight{
+	background-color:#007db3;
+}
+.hoc-procedure .hoc-article-highlight p, .hoc-finance .hoc-article-highlight p{
+	color: white;
+}
+.hoc-procedure h1:before, .hoc-finance h1:before{
+	background:#007db3;
+}
+.hoc-procedure h2, .hoc-finance h2{
+	border-left: 0.3em solid #007db3;
+}
+.hoc-procedure .hoc-article-highlight h2, .hoc-finance .hoc-article-highlight h2{
+	color: white;
+	padding: 0;
+	border:0;
+}
+.hoc-procedure .quote, .hoc-finance .quote{
+	background-color:#007db3;
+}
+
+
+/*-----------------------------------------LTVP, REAL PROPERTIES, FACILITY, TRAVEL AND TRANSPORTATION LIME GREEN*/
+
+
+
+.information > .hoc-ltvp, .information > .hoc-realproperties, .information > .hoc-facility, .information > .hoc-traveltransportation{
+	background:#78d64b;
+	color: black;
+}
+.hoc-ltvp .hoc-article-highlight, .hoc-realproperties .hoc-article-highlight, .hoc-facility .hoc-article-highlight, .hoc-traveltransportation .hoc-article-highlight{
+	background-color:#78d64b;
+}
+.hoc-ltvp .hoc-article-highlight p, .hoc-realproperties .hoc-article-highlight p, .hoc-facility .hoc-article-highlight p, .hoc-traveltransportation .hoc-article-highlight p{
+	color: black;
+}
+.hoc-ltvp h1:before, .hoc-realproperties h1:before, .hoc-facility h1:before, .hoc-traveltransportation h1:before{
+	background:#78d64b;
+}
+.hoc-ltvp h2, .hoc-realproperties h2, .hoc-facility h2, .hoc-traveltransportation h2{
+	border-left: 0.3em solid #78d64b;
+}
+.hoc-ltvp .hoc-article-highlight h2, .hoc-realproperties .hoc-article-highlight h2, .hoc-facility .hoc-article-highlight h2, .hoc-traveltransportation .hoc-article-highlight h2{
+	color: black;
+	padding: 0;
+	border:0;
+}
+.hoc-ltvp .quote, .hoc-realproperties .quote, .hoc-facility .quote, .hoc-traveltransportation .quote{
+	background-color:#78d64b;
+}
+
+/*-----------------------------------------SECURITY YELLOW*/
+
+
+
+.information > .hoc-security{
+	background:#ffb500;
+	color: black;
+}
+.hoc-security .hoc-article-highlight{
+	background-color:#ffb500;
+}
+.hoc-security .hoc-article-highlight p{
+	color: black;
+}
+.hoc-security h1:before{
+	background:#ffb500;
+}
+.hoc-security h2{
+	border-left: 0.3em solid #ffb500;
+}
+.hoc-security .hoc-article-highlight h2{
+	color: black;
+	padding: 0;
+	border:0;
+}
+.hoc-security .quote{
+	background-color:#ffb500;
+}
+
+
+/*-----------------------------------------EVENTS TEAL*/
+
+
+
+.information > .hoc-events{
+	background:#00b398;
+	color: black;
+}
+.hoc-events .hoc-article-highlight{
+	background-color:#00b398;
+}
+.hoc-events .hoc-article-highlight p{
+	color: black;
+}
+.hoc-events h1:before{
+	background:#00b398;
+}
+.hoc-events h2{
+	border-left: 0.3em solid #00b398;
+}
+.hoc-events .hoc-article-highlight h2{
+	color: black;
+	padding: 0;
+	border:0;
+}
+.hoc-events .quote{
+	background-color:#00b398;
+}
+
+/*-----------------------------------------PRINT*/
+
+
+/*-----------------------------------------RESPONSIVE*/
+
+
+
+@media only screen and (max-width: 768px) {
+	
+	.column{	
+    	column-count:1;
+  	}
+	
+	.hoc-article-content{
+		padding: 3.5em;
+	}
+
+}

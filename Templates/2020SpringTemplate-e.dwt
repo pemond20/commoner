@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>The Commoner</title>
+<!-- TemplateEndEditable -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="../bootstrap/css/bootstrap.css" rel="stylesheet">
+<link href="../css/style.css" rel="stylesheet" type="text/css">
+<script src="../js/jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="../bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- TemplateBeginEditable name="head" -->
+<!-- TemplateEndEditable -->
+</head>
+<body>
+<section class="hoc-top-banner">
+	<div class="container">		
+		<img src="../img/HouseOfCommonsSheild.png" alt=""> <img src="../img/HouseOfCommonsWordmark.png" alt="">
+		<div class="hoc-top-banner-right">
+			<a href="index-f.html">Français</a>
+		</div>
+	</div>
+</section>
+<section class="hoc-navbar">
+	<div class="container">
+		<div class="hoc-navbar-brand"><a href="index-e.html">The Commoner</a></div>
+		<div id="menu-wrapper">
+		<div class="hoc-navbar-menu">
+			<label for="show-menu" class="show-menu"><i class="fa fa-bars fa-1x"></i></label>
+    		<input type="checkbox" id="show-menu" role="button">
+        <ul id="menu">
+        <li>
+            <label for="show-articles" class="show-articles">Articles</label>
+    		<input type="checkbox" id="show-articles" role="button">
+            <ul id="menu-articles">
+                <li><a href="article-1.html">Article 1</a></li>
+				<li><a href="article-2.html">Article 2</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="file:///S|/Graphics/Projects/CC/TheCommoner/WEB/previous-editions.html">Previous Editions</a>
+        </li>
+			<li class="hoc-navbar-highlight"><a href="mailto:com@parl.gc.ca?subject=Story for The Commoner">Submit your story</a></li>
+			<li class="print-navbar"><i class="fa fa-print fa-2x"></i></li>
+    </ul>
+			
+			</div></div>
+	</div>
+</section>
+	<!-- TemplateBeginEditable name="content" -->
+<!-- TemplateEndEditable -->
+	<section class="footer">
+	<div class="container">
+	<div class="social-media">
+    	<a href="https://www.facebook.com/hocpagescdc/" target="_blank"><i class="fa fa-facebook-square fa-3x" aria-hidden="true"></i></a>
+		<a href="https://twitter.com/OurCommons" target="_blank"><i class="fa fa-twitter-square fa-3x" aria-hidden="true"></i></a>
+		<a href="https://www.instagram.com/hocspeaker/" target="_blank"><i class="fa fa-instagram fa-3x" aria-hidden="true"></i></a>
+		<a href="https://www.linkedin.com/company/houseofcommons-/" target="_blank"><i class="fa fa-linkedin-square fa-3x" aria-hidden="true"></i></a>
+    </div></div>
+</section>
+	<script type="text/javascript" src="../js/script.js"></script>
+</body>
+</html>
